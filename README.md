@@ -1,7 +1,7 @@
 # 240TestPrep
 Get dat practice in
 
-Hi everyone! If you're here you're probably trying to get ready for the CS240 final. Before we go any further though I'd like to share a few tips!
+Hi! If you're here you're probably trying to get ready for the CS240 final. Before we go any further though I'd like to share a few tips!
 - Take a deep breath and relax and know that you can do it!
 - Stop trying to memorize every little bit of syntax and start trying to understand concepts. Syntax is useless if you don't know
   how to use it!
