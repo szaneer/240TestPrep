@@ -18,7 +18,7 @@ int removeNodeByValue(int value) {
   return 0;
 }
 
-*treeNode insert(int value) {
+treeNode* insert(int value) {
   return NULL;
 }
 
@@ -26,7 +26,7 @@ void parseFile(char *name) {
 
 }
 
-*char printTree() {
+char* printTree() {
   return NULL;
 }
 
@@ -39,13 +39,14 @@ void test1() {
 
   printf("Tree should hold:8 3 1 6 4 7 10 14 13 \n");
 
-  if (!strcmp("8 3 1 6 4 7 10 14 13 ", result)) {
+  if (treeResult != NULL && !strcmp("8 3 1 6 4 7 10 14 13 ", treeResult)) {
     printf("Your tree holds:8 3 1 6 4 7 10 14 13 \n");
-    printf("Passed test case 1!\n")
+    printf("Passed test case 1!\n");
     return;
   }
 
   printf("Your tree holds:%s\n", treeResult);
+  printf("Failed test case 1 :(\n");
 }
 
 /*
@@ -56,12 +57,15 @@ int main(int argc, char* argv[]) {
     switch (*argv[1]) {
       case '0':
       case '1':
-        parseFile(argv[2]);
+        parseFile("1.txt");
         test1();
+        break;
       case '2':
-      case '3':
+      default:
+        break;
+
     }
   } else {
-    printf("Wrong amount of arguements. Remember to put in only test number as arguement!\n")
+    printf("Wrong amount of arguements. Remember to put in only test number as arguement!\n");
   }
 }
