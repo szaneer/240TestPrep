@@ -8,11 +8,11 @@ Hi everyone! If you're here you're probably trying to get ready for the CS240 fi
 - Don't try to make your code needlessly complex, no need to spend time implementing mergesort when your data set consists of 2 values.
 
 ##Background info
-So what is a binary tree? Imagine that you are playing a game and you start in an empty field. From this field you see that there is only two paths out, 
-one to your left and the other to your right. Although they both lead to totally new areas you've never been to before. You decide to take the right path 
+So what is a binary tree? Imagine that you are playing a game and you start in an field with a massive number 10 in the middle of it. From this field you see that there is only two paths out, 
+one to your left and the other to your right. Although they both lead to totally new areas you've never been to before. You decide to take the left path 
 and arrive in another field but this time there is a massive number 5 in the middle of it. From the field you currently see that there are another two paths 
-you can choose from to continue. You continue the right path always ending up in a new field with a large number in it. You eventually reach 
-a field that does not contain any paths to new fields. You then decide you want to search through every field by going to previous nodes until there is a left path you can go down and then search all right paths leading from that one and repeat until you've gone though every field there is.
+you can choose from to continue. You continue shoosing the left path always ending up in a new field with a large number in it. You eventually reach 
+a field that does not contain any paths to new fields. You then decide you want to search through every field by going to previous nodes until there is a right path you can go down and then search all right paths leading from that one and repeat until you've gone though every field there is.
 
 Your story sucks, what does any of this mean?
 Great question!
@@ -36,7 +36,19 @@ Your task is to implement the following functions within the c file:
 - printTree - Return a string holding all tree values in order of search like in the story with a space in between all numbers and a space at the end
 - freeTree - Free all nodes from the tree
 
+Clarification: 
+- This type of binary tree is a BST or Binary Search Tree which means all new nodes with a value larger than the root node are to be inserted into the right side of the tree while smaller values are inserted into the left side
+- Do not insert values that already exist in tree
+
 ##Testing
 - Test case can be run with the command ./ProgramName Test#
 - For example: ./BinaryTreeTest 1
 - Using 0 will run all test cases
+
+Test 1:
+- Tests to see if insert and printTree are working.
+
+Test 2:
+
+
+Test 3:
