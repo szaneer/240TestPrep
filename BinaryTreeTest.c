@@ -26,7 +26,7 @@ void parseFile(char *name) {
 
 }
 
-char* printTree(treeNode *node) {
+void printTree(treeNode *node) {
   return NULL;
 }
 
