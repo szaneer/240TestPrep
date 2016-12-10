@@ -10,15 +10,15 @@ typedef struct TreeNode {
 
 treeNode *root = NULL;
 
-int removeNode(treeNode *node) {
+int removeNode(treeNode *node, treeNode *toRemove) {
   return 0;
 }
 
-int removeNodeByValue(int value) {
+int removeNodeByValue(treeNode * node, int value) {
   return 0;
 }
 
-treeNode* insert(int value) {
+treeNode* insert(treeNode *node) {
   return NULL;
 }
 
@@ -26,27 +26,16 @@ void parseFile(char *name) {
 
 }
 
-char* printTree() {
+char* printTree(treeNode *node) {
   return NULL;
 }
 
-void freeTree() {
-
+void freeTree(treeNode *node) {
 }
 
 void test1() {
-  char *treeResult = printTree();
-
   printf("Tree should hold:8 3 1 6 4 7 10 14 13 \n");
-
-  if (treeResult != NULL && !strcmp("8 3 1 6 4 7 10 14 13 ", treeResult)) {
-    printf("Your tree holds:8 3 1 6 4 7 10 14 13 \n");
-    printf("Passed test case 1!\n");
-    return;
-  }
-
-  printf("Your tree holds:%s\n", treeResult);
-  printf("Failed test case 1 :(\n");
+  printf("Your tree holds:%s\n", printTree());
 }
 
 /*
