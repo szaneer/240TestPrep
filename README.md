@@ -28,8 +28,13 @@ In this repository there are the following files:
 - BinaryTreeTest.c - Holds the functions you need to implement along with test cases
 - x.txt files - Holds values to be loaded into Binary Tree
 
-Your task is to implement the following functions within the c file.
-- removeNode - Removes a node from the binary
+Your task is to implement the following functions within the c file:
+- removeNode - Remove a node from the binary given a pointer to a node
+- removeNodeByValue - Remove a node given an integer value
+- insert - Create and insert node into tree given an integer value
+- parseFile - Parse file for values and load them into tree
+- printTree - Return a string holding all tree values in order of search like in the story with a space in between all numbers and a space at the end
+- freeTree - Free all nodes from the tree
 
 ##Testing
 - Test case can be run with the command ./ProgramName Test#
