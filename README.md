@@ -31,17 +31,18 @@ In this repository there are the following files:
 - x.txt files - Holds values to be loaded into Binary Tree
 
 Your task is to implement the following functions within the c file:
-- removeNode - Remove a node from the binary given a pointer to a node
-- removeNodeByValue - Remove a node given an integer value
-- insert - Create and insert node into tree given an integer value
-- parseFile - Parse file for values and load them into tree
-- printTree - Return a string holding all tree values in order of search like in the story with a space in between all numbers and a space at the end
-- freeTree - Free all nodes from the tree
+- removeNode - Remove a node from the binary given a pointer to a node and starting node
+- removeNodeByValue - Remove a node given an integer value and a starting node
+- insert - Given a node insert into tree
+- parseFile - Parse file for values, create nodes, and load them into tree
+- printTree - Print out all tree values in order of traversal like in the story with a space in between
+- freeTree - Free all nodes from the tree given a starting node
 
 Clarification: 
 - This type of binary tree is a BST or Binary Search Tree which means all new nodes with a value larger than the root node are to be inserted into the right side of the tree while smaller values are inserted into the left side
 - Do not insert values that already exist in tree
 - Make sure there is an extra space at end of string returned by printTree
+- Use recursion everywhere
 
 ##Testing
 - Test case can be run with the command ./ProgramName Test#
