@@ -33,7 +33,7 @@ In this repository there are the following files:
 Your task is to implement the following functions within the c file:
 - removeNode - Remove a node from the binary given a pointer to a node and starting node
 - removeNodeByValue - Remove a node given an integer value and a starting node
-- insert - Given a node insert into tree
+- insert - Given a node insert into tree given a starting node
 - parseFile - Parse file for values, create nodes, and load them into tree
 - printTree - Print out all tree values in order of traversal like in the story with a space in between
 - freeTree - Free all nodes from the tree given a starting node
