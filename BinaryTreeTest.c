@@ -18,7 +18,7 @@ int removeNodeByValue(treeNode * node, int value) {
   return 0;
 }
 
-treeNode* insert(treeNode *node) {
+treeNode* insert(treeNode *node, treeNode *toInsert) {
   return NULL;
 }
 
