@@ -22,6 +22,8 @@ Think of the follwing things in the story as the following:
 - Field without any paths - Leaf node
 - Exploring all fields - Recursive traversal of all nodes
 
+![alt tag](images/tree.JPG)
+
 ##Alright now let's get down to business!
 
 In this repository there are the following files:
@@ -39,14 +41,16 @@ Your task is to implement the following functions within the c file:
 Clarification: 
 - This type of binary tree is a BST or Binary Search Tree which means all new nodes with a value larger than the root node are to be inserted into the right side of the tree while smaller values are inserted into the left side
 - Do not insert values that already exist in tree
+- Make sure there is an extra space at end of string returned by printTree
 
 ##Testing
 - Test case can be run with the command ./ProgramName Test#
 - For example: ./BinaryTreeTest 1
 - Using 0 will run all test cases
+- Input file is only a single line long
 
 Test 1:
-- Tests to see if insert and printTree are working.
+- Tests to see if parseFile, insert and printTree are working.
 
 Test 2:
 
