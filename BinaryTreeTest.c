@@ -35,7 +35,7 @@ void freeTree(treeNode *node) {
 
 void test1() {
   printf("Tree should hold:8 3 1 6 4 7 10 14 13 \n");
-  printf("Your tree holds:%s\n", printTree());
+  printf("Your tree holds:%s\n", printTree(root));
 }
 
 /*
