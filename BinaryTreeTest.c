@@ -1,5 +1,6 @@
 #include "stdlib.h"
 #include "stdio.h"
+#include "string.h"
 
 typedef struct TreeNode {
   /* data */
@@ -27,7 +28,6 @@ void parseFile(char *name) {
 }
 
 void printTree(treeNode *node) {
-  return NULL;
 }
 
 void freeTree(treeNode *node) {
@@ -43,7 +43,6 @@ void test1() {
 
 
 /*
-
 */
 int main(int argc, char* argv[]) {
   if (argc == 2) {
