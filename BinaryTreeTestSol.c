@@ -78,6 +78,12 @@ void printTree(treeNode *node) {
 }
 
 void freeTree(treeNode *node) {
+  if (node == NULL) {
+    return;
+  }
+
+  freeTree(node->right);
+  freeTree(node->left);
 }
 
 void test1() {
