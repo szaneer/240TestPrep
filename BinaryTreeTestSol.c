@@ -11,32 +11,32 @@ typedef struct TreeNode {
 
 treeNode *root = NULL;
 
-int removeNode(treeNode *node, treeNode *toRemove) {
+int removeNode(treeNode *current, treeNode *toRemove) {
   return 0;
 }
 
-int removeNodeByValue(treeNode * node, int value) {
+int removeNodeByValue(treeNode *current, int value) {
   return 0;
 }
 
-treeNode* insert(treeNode *node, treeNode *toInsert) {
+treeNode* insert(treeNode *current, treeNode *toInsert) {
   if (root == NULL) {
     root = toInsert;
     return root;
   }
-  if (toInsert->value > node->value) {
-    if (node->right == NULL) {
-      node->right = toInsert;
-      return node->right;
+  if (toInsert->value > current->value) {
+    if (current->right == NULL) {
+      current->right = toInsert;
+      return current->right;
     }
-    return insert(node->right, toInsert);
+    return insert(current->right, toInsert);
   }
-  if (toInsert->value < node->value) {
-    if (node->left == NULL) {
-      node->left = toInsert;
-      return node->left;
+  if (toInsert->value < current->value) {
+    if (current->left == NULL) {
+      current->left = toInsert;
+      return current->left;
     }
-    return insert(node->left, toInsert);
+    return insert(current->left, toInsert);
   }
 
   free(toInsert);
@@ -64,26 +64,25 @@ void parseFile(char *name) {
     insert(root, node);
     currentNumber = strtok(NULL, token);
   }
-
-
 }
 
-void printTree(treeNode *node) {
-  if (node == NULL) {
+void printTree(treeNode *current) {
+  if (current == NULL) {
     return;
   }
-  printf("%d ", node->value);
-  printTree(node->left);
-  printTree(node->right);
+  
+  printf("%d ", current->value);
+  printTree(current->left);
+  printTree(current->right);
 }
 
-void freeTree(treeNode *node) {
-  if (node == NULL) {
+void freeTree(treeNode *current) {
+  if (current == NULL) {
     return;
   }
-
-  freeTree(node->right);
-  freeTree(node->left);
+  freeTree(current->right);
+  freeTree(current->left);
+  free(current);
 }
 
 void test1() {
@@ -91,6 +90,15 @@ void test1() {
   printf("Your tree holds:");
   printTree(root);
   printf("\n");
+}
+
+void test2() {
+	printf("Tree should hold:10 5 4 3 1 8 20 14 13 \n");
+	printf("Your tree holds:");
+	printTree(root);
+	printf("\n");
+	freeTree(root);
+	printf("Your free treee function seems to work but I wouldn't know lol, please try running this test with valgrind!\n");
 }
 
 /*
@@ -105,6 +113,9 @@ int main(int argc, char* argv[]) {
         test1();
         break;
       case '2':
+		parseFile("2.txt");
+		test2();
+		break;
       default:
         break;
 
