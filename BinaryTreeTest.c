@@ -12,13 +12,13 @@ typedef struct TreeNode {
 treeNode *root = NULL; //Holds the head or the start of the binary tree. Think of the first field the person starts in.
 
 //Write a function that finds a node in the tree and removes it along with all it's sub nodes.
-int removeNode(treeNode *current, treeNode *toRemove) {
-  return 0;
+void removeNode(treeNode *current, treeNode *toRemove) {
+  return;
 }
 
 //Write a function that finds a node in tree given a value and remove is along with all it's sub nodes.
-int removeNodeByValue(treeNode * current, int value) {
-  return 0;
+void removeNodeByValue(treeNode * current, int value) {
+  return;
 }
 
 //Write a function that inserts a node into the tree following rules for a BST. Left = lower values and Right = higher values. Do not insert values that already exist.
@@ -57,12 +57,34 @@ void test2() {
 	printf("Your free treee function seems to work but I wouldn't know lol, please try running this test with valgrind!\n");
 }
 
+void test3() {
+	printf("Tree should hold:10 5 4 3 1 2 8 7 6 20 14 13 15 90 200\n");
+	printf("Your tree holds:");
+	printTree(root);
+	printf("\n");
+	removeNodeByValue(root, 8);
+	removeNodeByValue(root, 4);
+	printf("After removing values tree should hold:10 5 20 14 13 15 90 200\n");
+	printf("Your tree holds:");
+	printTree(root);
+	printf("\n");
+	freeTree(root);
+	printf("Your free treee function seems to work but I wouldn't know lol, please try running this test with valgrind!\n");
+}
+
 /*
 */
 int main(int argc, char* argv[]) {
   if (argc == 2) {
     switch (*argv[1]) {
       case '0':
+		parseFile("1.txt");
+        test1();
+		parseFile("2.txt");
+		test2();
+		parseFile("3.txt");
+		test3();
+        break;
       case '1':
         parseFile("1.txt");
         test1();
@@ -72,8 +94,9 @@ int main(int argc, char* argv[]) {
 		test2();
 		break;
       default:
+		parseFile("3.txt");
+		test3();
         break;
-
     }
   } else {
     printf("Wrong amount of arguements. Remember to put in only test number as arguement!\n");
